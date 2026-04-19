@@ -11,7 +11,6 @@ public class CmdHelper {
     try {
       var process = new ProcessBuilder("cmd", "/c", "start", uri).start();
       process.waitFor();
-      throw new IOException("Not supported");
     } catch (Throwable t) {
       showErrorAlert(errorMessage + "\nTechnical details: " + t.getMessage());
     }
