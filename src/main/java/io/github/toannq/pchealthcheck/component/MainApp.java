@@ -21,7 +21,7 @@ public class MainApp extends Application {
     var pcInfo = PcInfoCollector.collect();
 
     var banner = new Banner(getHostServices(), pcInfo);
-    var healthBox = new HealthBox();
+    var healthBox = new HealthBox(pcInfo.usagePercent(), pcInfo.hasBattery());
 
     var content = new VBox(20);
     content.setPadding(new Insets(30));

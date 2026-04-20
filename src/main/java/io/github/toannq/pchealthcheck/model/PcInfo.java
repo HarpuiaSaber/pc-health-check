@@ -9,5 +9,7 @@ public record PcInfo(String name,
                      List<String> gpus,
                      int ram,
                      List<BigDecimal> diskSizes,
-                     int age) {
+                     BigDecimal usagePercent,
+                     int age,
+                     boolean hasBattery) {
 }
